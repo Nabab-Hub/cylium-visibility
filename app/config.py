@@ -21,8 +21,8 @@ class Settings(BaseSettings):
     VISIBILITY_MODEL: str = "gemini-3.6-flash"
 
     # Firebase Firestore Configuration (API Key validation & Usage tracking)
-    FIREBASE_PROJECT_ID: str = "nude-checker"
-    FIREBASE_CREDENTIALS: Optional[str] = None
+    FIREBASE_PROJECT_ID: str = "cyliumos"
+    FIREBASE_CREDENTIALS: Optional[str] = "cyliumos-firebase-adminsdk.json"
     FIREBASE_SERVICE_ACCOUNT_JSON: Optional[str] = None
     REQUIRE_FIREBASE_AUTH: bool = True
 

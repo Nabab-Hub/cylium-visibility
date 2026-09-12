@@ -15,6 +15,11 @@ _firestore_client: Optional[firestore.Client] = None
 _firebase_initialized: bool = False
 
 DEFAULT_CREDENTIAL_PATHS = [
+    "cyliumos-firebase-adminsdk.json",
+    os.path.join(os.path.dirname(__file__), "..", "..", "cyliumos-firebase-adminsdk.json"),
+    os.path.join(os.getcwd(), "cyliumos-firebase-adminsdk.json"),
+    os.path.join(os.getcwd(), "ai-models", "visibility-model", "cyliumos-firebase-adminsdk.json"),
+    os.path.join(os.getcwd(), "ai-models", "nsfw-content-checker-api", "cyliumos-firebase-adminsdk.json"),
     "/etc/secrets/firebase-service-account.json",
     "firebase-service-account.json",
     "nude-checker-firebase-adminsdk.json",
@@ -26,6 +31,7 @@ DEFAULT_CREDENTIAL_PATHS = [
     os.path.join(os.getcwd(), "ai-models", "visibility-model", "nude-checker-firebase-adminsdk.json"),
     os.path.join(os.getcwd(), "ai-models", "nsfw-content-checker-api", "nude-checker-firebase-adminsdk.json"),
     os.path.join(os.getcwd(), "..", "..", "firebase-service-account.json"),
+    os.path.join(os.getcwd(), "..", "..", "cyliumos-firebase-adminsdk.json"),
 ]
 
 
