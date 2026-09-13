@@ -112,7 +112,7 @@ visibility-model/
 All detection endpoints require an active API key passed in the **`X-API-Key`** header:
 
 ```http
-X-API-Key: cyl_live_x9z0abcdef1234567890
+X-API-Key: cyk_live_x9z0abcdef1234567890
 ```
 
 ### Firestore Verification Workflow
@@ -184,7 +184,7 @@ Evaluates an image provided via JSON payload. Provide **exactly one** of `image_
 ```bash
 curl -X POST "http://localhost:8003/detect-visibility" \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: cyl_live_x9z0abcdef1234567890" \
+  -H "X-API-Key: cyk_live_x9z0abcdef1234567890" \
   -d '{
     "image_url": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6"
   }'
@@ -194,7 +194,7 @@ curl -X POST "http://localhost:8003/detect-visibility" \
 ```bash
 curl -X POST "http://localhost:8003/detect-visibility" \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: cyl_live_x9z0abcdef1234567890" \
+  -H "X-API-Key: cyk_live_x9z0abcdef1234567890" \
   -d '{
     "image_base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQE..."
   }'
@@ -229,7 +229,7 @@ Evaluates an image uploaded directly as binary `multipart/form-data`.
 #### cURL Example:
 ```bash
 curl -X POST "http://localhost:8003/detect-visibility/upload" \
-  -H "X-API-Key: cyl_live_x9z0abcdef1234567890" \
+  -H "X-API-Key: cyk_live_x9z0abcdef1234567890" \
   -F "file=@samples/test_img1.jpg"
 ```
 
@@ -278,7 +278,7 @@ async function detectVisibility(imageUrl: string, apiKey: string) {
 }
 
 // Example usage
-detectVisibility("https://example.com/item.png", "cyl_live_x9z0abcdef1234567890")
+detectVisibility("https://example.com/item.png", "cyk_live_x9z0abcdef1234567890")
   .then(console.log)
   .catch(console.error);
 ```
@@ -289,7 +289,7 @@ detectVisibility("https://example.com/item.png", "cyl_live_x9z0abcdef1234567890"
 import requests
 
 API_URL = "http://localhost:8003/detect-visibility/upload"
-API_KEY = "cyl_live_x9z0abcdef1234567890"
+API_KEY = "cyk_live_x9z0abcdef1234567890"
 
 headers = {
     "X-API-Key": API_KEY,

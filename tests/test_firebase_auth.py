@@ -50,7 +50,7 @@ def test_inactive_api_key_raises_403():
 
     with patch("app.api.deps.get_firestore_client", return_value=mock_db):
         with pytest.raises(HTTPException) as exc_info:
-            verify_api_key(api_key="nsk_live_testkey")
+            verify_api_key(api_key="cyk_live_testkey")
         assert exc_info.value.status_code == 403
         assert exc_info.value.detail["error"] == "api_key_inactive"
 
@@ -72,7 +72,7 @@ def test_monthly_limit_reached_raises_429():
 
     with patch("app.api.deps.get_firestore_client", return_value=mock_db):
         with pytest.raises(HTTPException) as exc_info:
-            verify_api_key(api_key="nsk_live_testlimit")
+            verify_api_key(api_key="cyk_live_testlimit")
         assert exc_info.value.status_code == 429
         assert exc_info.value.detail["error"] == "monthly_limit_reached"
 
@@ -95,7 +95,7 @@ def test_valid_active_key_returns_metadata():
     mock_db.collection.return_value = query_mock
 
     with patch("app.api.deps.get_firestore_client", return_value=mock_db):
-        key_data = verify_api_key(api_key="nsk_live_validkey")
+        key_data = verify_api_key(api_key="cyk_live_validkey")
         assert key_data["key_id"] == "doc_3"
         assert key_data["user_id"] == "user_xyz"
         assert key_data["plan"] == "pro"

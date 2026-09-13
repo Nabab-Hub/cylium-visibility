@@ -24,7 +24,7 @@ def mock_auth_dependency():
         "key_hash": "test_hash",
         "user_id": "test_user_id",
         "plan": "pro",
-        "key_prefix": "nsk_live",
+        "key_prefix": "cyk_live",
         "created_at": 1700000000000,
         "expires_at": None,
         "monthly_limit": 1000,
