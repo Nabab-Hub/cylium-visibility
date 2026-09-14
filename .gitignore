@@ -11,6 +11,6 @@ htmlcov/
 Thumbs.db
 *-adminsdk*.json
 firebase-service-account.json
-.env
-.env.*
 !.env.example
+config.bat
+node_modules
